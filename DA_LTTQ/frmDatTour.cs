@@ -184,51 +184,55 @@ namespace DA_LTTQ
             tbl_Tour Tour = new tbl_Tour();
             Tour.MaTour = dgvTour.SelectedRows[0].Cells[0].Value.ToString();
             dttable = bllTour.GetTTTour(Tour);
-            TTTourfrm.lblTenTour.Text = "[" + dttable.Rows[0]["MATOUR"].ToString() + "] " + dttable.Rows[0]["TENTOUR"].ToString();
-            TTTourfrm.lblMoTa.Text = dttable.Rows[0]["MOTA"].ToString();
-            TTTourfrm.lblGiaTour.Text = string.Format("{0:#,##0}", decimal.Parse(dttable.Rows[0]["GIATOUR"].ToString())) + "/Khách";
+            try {
+                TTTourfrm.lblTenTour.Text = "[" + dttable.Rows[0]["MATOUR"].ToString() + "] " + dttable.Rows[0]["TENTOUR"].ToString();
+                TTTourfrm.lblMoTa.Text = dttable.Rows[0]["MOTA"].ToString();
+                TTTourfrm.lblGiaTour.Text = string.Format("{0:#,##0}", decimal.Parse(dttable.Rows[0]["GIATOUR"].ToString())) + "/Khách";
 
-            MemoryStream ms1 = new MemoryStream((byte[])(dttable.Rows[0]["ANH1"]));
-            TTTourfrm.picHinh1.Image = Image.FromStream(ms1);
+                MemoryStream ms1 = new MemoryStream((byte[])(dttable.Rows[0]["ANH1"]));
+                TTTourfrm.picHinh1.Image = Image.FromStream(ms1);
 
-            MemoryStream ms2 = new MemoryStream((byte[])(dttable.Rows[0]["ANH2"]));
-            TTTourfrm.picHinh2.Image = Image.FromStream(ms2);
+                MemoryStream ms2 = new MemoryStream((byte[])(dttable.Rows[0]["ANH2"]));
+                TTTourfrm.picHinh2.Image = Image.FromStream(ms2);
 
-            MemoryStream ms3 = new MemoryStream((byte[])(dttable.Rows[0]["ANH3"]));
-            TTTourfrm.picHinh3.Image = Image.FromStream(ms3);
+                MemoryStream ms3 = new MemoryStream((byte[])(dttable.Rows[0]["ANH3"]));
+                TTTourfrm.picHinh3.Image = Image.FromStream(ms3);
 
-            MemoryStream ms4 = new MemoryStream((byte[])(dttable.Rows[0]["ANH4"]));
-            TTTourfrm.picHinh4.Image = Image.FromStream(ms4);
+                MemoryStream ms4 = new MemoryStream((byte[])(dttable.Rows[0]["ANH4"]));
+                TTTourfrm.picHinh4.Image = Image.FromStream(ms4);
 
-            TTTourfrm.lblTGKH.Text = dttable.Rows[0]["NGAYDITOUR"].ToString();
-            TTTourfrm.NgayKetThuc = dttable.Rows[0]["NGAYKETTHUC"].ToString();
-            TTTourfrm.lblNoiKH.Text = dttable.Rows[0]["TENDDI"].ToString();
-            TTTourfrm.lblSoNgay.Text = dttable.Rows[0]["TG"].ToString() + " ngày";
-            TTTourfrm.lblSlot.Text = dttable.Rows[0]["SOLUONGCONLAI"].ToString();
-            int SoDem = Convert.ToInt32(dttable.Rows[0]["TG"].ToString()) - 1;
-            TTTourfrm.lblTGnho.Text = TTTourfrm.lblSoNgay.Text + " " + SoDem + " đêm";
-            TTTourfrm.lblPT.Text = dttable.Rows[0]["TENPT"].ToString();
-            TTTourfrm.lblDiemDen.Text = dttable.Rows[0]["TENDDEN"].ToString();
-            TTTourfrm.lblKS.Text = dttable.Rows[0]["TENLKS"].ToString();
-            TTTourfrm.lblMaTour.Text = dttable.Rows[0]["MATOUR"].ToString();
+                TTTourfrm.lblTGKH.Text = dttable.Rows[0]["NGAYDITOUR"].ToString();
+                TTTourfrm.NgayKetThuc = dttable.Rows[0]["NGAYKETTHUC"].ToString();
+                TTTourfrm.lblNoiKH.Text = dttable.Rows[0]["TENDDI"].ToString();
+                TTTourfrm.lblSoNgay.Text = dttable.Rows[0]["TG"].ToString() + " ngày";
+                TTTourfrm.lblSlot.Text = dttable.Rows[0]["SOLUONGCONLAI"].ToString();
+                int SoDem = Convert.ToInt32(dttable.Rows[0]["TG"].ToString()) - 1;
+                TTTourfrm.lblTGnho.Text = TTTourfrm.lblSoNgay.Text + " " + SoDem + " đêm";
+                TTTourfrm.lblPT.Text = dttable.Rows[0]["TENPT"].ToString();
+                TTTourfrm.lblDiemDen.Text = dttable.Rows[0]["TENDDEN"].ToString();
+                TTTourfrm.lblKS.Text = dttable.Rows[0]["TENLKS"].ToString();
+                TTTourfrm.lblMaTour.Text = dttable.Rows[0]["MATOUR"].ToString();
 
-            String ngayDiTour = dttable.Rows[0]["NGAYDITOUR"].ToString();
+                String ngayDiTour = dttable.Rows[0]["NGAYDITOUR"].ToString();
 
-            DateTime today = DateTime.Now;
-            DateTime lastDay = Convert.ToDateTime(dttable.Rows[0]["NGAYDITOUR"]);
+                DateTime today = DateTime.Now;
+                DateTime lastDay = Convert.ToDateTime(dttable.Rows[0]["NGAYDITOUR"]);
 
-            TimeSpan calDays = lastDay - today;
+                TimeSpan calDays = lastDay - today;
 
-            // Ngày đặt Tour phải trước Ngày đi Tour 1 ngày
-            if (Convert.ToDouble(calDays.TotalDays) <= 1)
-            {
-                TTTourfrm.btlDatTour.Enabled = false;
+                // Ngày đặt Tour phải trước Ngày đi Tour 1 ngày
+                if (Convert.ToDouble(calDays.TotalDays) <= 1)
+                {
+                    TTTourfrm.btlDatTour.Enabled = false;
+                }
+
+                if (Convert.ToDouble(calDays.TotalDays) > 1)
+                {
+                    TTTourfrm.btlDatTour.Enabled = true;
+                }
             }
+            catch { }
 
-            if (Convert.ToDouble(calDays.TotalDays) > 1)
-            {
-                TTTourfrm.btlDatTour.Enabled = true;
-            }
             openChildForm(TTTourfrm);
         }
 

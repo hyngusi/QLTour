@@ -47,13 +47,16 @@ namespace DA_LTTQ
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             ShowAllHoaDon();
-            //checkBXemHDTrongThang.Checked = false;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             ShowAllHoaDon();
-            //checkBXemHDTrongThang.Checked = false;
+        }
+
+        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

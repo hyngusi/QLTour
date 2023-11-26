@@ -40,7 +40,6 @@ namespace DA_LTTQ
             this.btnNhanVien = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pnlMenu1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.frmTour = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.ControlMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -48,7 +47,6 @@ namespace DA_LTTQ
             this.pnlMenu3.SuspendLayout();
             this.pnlMenu2.SuspendLayout();
             this.pnlMenu1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +57,7 @@ namespace DA_LTTQ
             // 
             // panelChildForm
             // 
+            this.panelChildForm.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelChildForm.Location = new System.Drawing.Point(12, 115);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.ShadowDecoration.Parent = this.panelChildForm;
@@ -68,7 +67,7 @@ namespace DA_LTTQ
             // pnlMenu4
             // 
             this.pnlMenu4.Controls.Add(this.btnQLDV);
-            this.pnlMenu4.Location = new System.Drawing.Point(326, 44);
+            this.pnlMenu4.Location = new System.Drawing.Point(393, 44);
             this.pnlMenu4.Name = "pnlMenu4";
             this.pnlMenu4.ShadowDecoration.Parent = this.pnlMenu4;
             this.pnlMenu4.Size = new System.Drawing.Size(170, 52);
@@ -97,7 +96,7 @@ namespace DA_LTTQ
             // pnlMenu3
             // 
             this.pnlMenu3.Controls.Add(this.btnKH);
-            this.pnlMenu3.Location = new System.Drawing.Point(725, 44);
+            this.pnlMenu3.Location = new System.Drawing.Point(655, 44);
             this.pnlMenu3.Name = "pnlMenu3";
             this.pnlMenu3.ShadowDecoration.Parent = this.pnlMenu3;
             this.pnlMenu3.Size = new System.Drawing.Size(170, 52);
@@ -181,21 +180,9 @@ namespace DA_LTTQ
             this.frmTour.Text = "Quản lý Tour";
             this.frmTour.Click += new System.EventHandler(this.frmTour_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::DA_LTTQ.Properties.Resources._8_Logo_Travel_Agent_Vietravel_01;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(502, 8);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(217, 94);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2GradientPanel5
             // 
-            this.guna2GradientPanel5.Controls.Add(this.guna2PictureBox1);
+            this.guna2GradientPanel5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.guna2GradientPanel5.Controls.Add(this.pnlMenu1);
             this.guna2GradientPanel5.Controls.Add(this.pnlMenu2);
             this.guna2GradientPanel5.Controls.Add(this.pnlMenu3);
@@ -243,7 +230,7 @@ namespace DA_LTTQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(40)))), ((int)(((byte)(37)))));
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1218, 912);
             this.Controls.Add(this.guna2GradientPanel5);
             this.Controls.Add(this.panelChildForm);
@@ -256,7 +243,6 @@ namespace DA_LTTQ
             this.pnlMenu3.ResumeLayout(false);
             this.pnlMenu2.ResumeLayout(false);
             this.pnlMenu1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -277,6 +263,5 @@ namespace DA_LTTQ
         private Guna.UI2.WinForms.Guna2GradientTileButton frmTour;
         private Guna.UI2.WinForms.Guna2ControlBox ControlMin;
         private Guna.UI2.WinForms.Guna2ControlBox ControlClose;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

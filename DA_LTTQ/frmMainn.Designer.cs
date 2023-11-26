@@ -31,9 +31,11 @@ namespace DA_LTTQ
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTour = new Guna.UI2.WinForms.Guna2GradientButton();
             this.ControlMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblXinChao = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnHoaDon = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -41,23 +43,22 @@ namespace DA_LTTQ
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTrangChu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
             this.ElipseFrm = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTour = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnTrangChu = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel5
@@ -69,6 +70,29 @@ namespace DA_LTTQ
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
             this.guna2Panel5.Size = new System.Drawing.Size(183, 52);
             this.guna2Panel5.TabIndex = 2;
+            // 
+            // btnTour
+            // 
+            this.btnTour.BorderRadius = 10;
+            this.btnTour.CheckedState.Parent = this.btnTour;
+            this.btnTour.CustomImages.Parent = this.btnTour;
+            this.btnTour.DisabledState.Parent = this.btnTour;
+            this.btnTour.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTour.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnTour.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTour.ForeColor = System.Drawing.Color.White;
+            this.btnTour.HoverState.Parent = this.btnTour;
+            this.btnTour.Image = global::DA_LTTQ.Properties.Resources.icons8_tour_bus_50;
+            this.btnTour.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTour.Location = new System.Drawing.Point(0, 0);
+            this.btnTour.Name = "btnTour";
+            this.btnTour.ShadowDecoration.Parent = this.btnTour;
+            this.btnTour.Size = new System.Drawing.Size(170, 52);
+            this.btnTour.TabIndex = 2;
+            this.btnTour.TabStop = false;
+            this.btnTour.Text = "Tour";
+            this.btnTour.Click += new System.EventHandler(this.btnTour_Click);
             // 
             // ControlMin
             // 
@@ -107,6 +131,16 @@ namespace DA_LTTQ
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(163, 53);
             this.guna2Panel1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(157, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
             // 
             // lblXinChao
             // 
@@ -201,6 +235,28 @@ namespace DA_LTTQ
             this.guna2Panel4.Size = new System.Drawing.Size(183, 52);
             this.guna2Panel4.TabIndex = 1;
             // 
+            // btnTrangChu
+            // 
+            this.btnTrangChu.BorderRadius = 10;
+            this.btnTrangChu.CheckedState.Parent = this.btnTrangChu;
+            this.btnTrangChu.CustomImages.Parent = this.btnTrangChu;
+            this.btnTrangChu.DisabledState.Parent = this.btnTrangChu;
+            this.btnTrangChu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTrangChu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnTrangChu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrangChu.ForeColor = System.Drawing.Color.White;
+            this.btnTrangChu.HoverState.Parent = this.btnTrangChu;
+            this.btnTrangChu.Image = global::DA_LTTQ.Properties.Resources.icons8_home_50;
+            this.btnTrangChu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTrangChu.Location = new System.Drawing.Point(0, 0);
+            this.btnTrangChu.Name = "btnTrangChu";
+            this.btnTrangChu.ShadowDecoration.Parent = this.btnTrangChu;
+            this.btnTrangChu.Size = new System.Drawing.Size(170, 52);
+            this.btnTrangChu.TabIndex = 1;
+            this.btnTrangChu.Text = "  Trang chủ";
+            this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click_1);
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -264,61 +320,9 @@ namespace DA_LTTQ
             this.guna2GradientButton1.TabIndex = 10;
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
-            // pictureBox1
+            // guna2ResizeForm1
             // 
-            this.pictureBox1.Image = global::DA_LTTQ.Properties.Resources._8_Logo_Travel_Agent_Vietravel_01;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
-            // 
-            // btnTour
-            // 
-            this.btnTour.BorderRadius = 10;
-            this.btnTour.CheckedState.Parent = this.btnTour;
-            this.btnTour.CustomImages.Parent = this.btnTour;
-            this.btnTour.DisabledState.Parent = this.btnTour;
-            this.btnTour.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnTour.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnTour.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTour.ForeColor = System.Drawing.Color.White;
-            this.btnTour.HoverState.Parent = this.btnTour;
-            this.btnTour.Image = global::DA_LTTQ.Properties.Resources.icons8_tour_bus_50;
-            this.btnTour.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTour.Location = new System.Drawing.Point(0, 0);
-            this.btnTour.Name = "btnTour";
-            this.btnTour.ShadowDecoration.Parent = this.btnTour;
-            this.btnTour.Size = new System.Drawing.Size(170, 52);
-            this.btnTour.TabIndex = 2;
-            this.btnTour.TabStop = false;
-            this.btnTour.Text = "Tour";
-            this.btnTour.Click += new System.EventHandler(this.btnTour_Click);
-            // 
-            // btnTrangChu
-            // 
-            this.btnTrangChu.BorderRadius = 10;
-            this.btnTrangChu.CheckedState.Parent = this.btnTrangChu;
-            this.btnTrangChu.CustomImages.Parent = this.btnTrangChu;
-            this.btnTrangChu.DisabledState.Parent = this.btnTrangChu;
-            this.btnTrangChu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnTrangChu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnTrangChu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangChu.HoverState.Parent = this.btnTrangChu;
-            this.btnTrangChu.Image = global::DA_LTTQ.Properties.Resources.icons8_home_50;
-            this.btnTrangChu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTrangChu.Location = new System.Drawing.Point(0, 0);
-            this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.ShadowDecoration.Parent = this.btnTrangChu;
-            this.btnTrangChu.Size = new System.Drawing.Size(170, 52);
-            this.btnTrangChu.TabIndex = 1;
-            this.btnTrangChu.Text = "  Trang chủ";
-            this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click_1);
+            this.guna2ResizeForm1.TargetForm = this;
             // 
             // frmMainn
             // 
@@ -335,6 +339,7 @@ namespace DA_LTTQ
             this.Load += new System.EventHandler(this.frmMainn_Load);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
@@ -342,7 +347,6 @@ namespace DA_LTTQ
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,5 +372,6 @@ namespace DA_LTTQ
         public System.Windows.Forms.Label lblXinChao;
         public Guna.UI2.WinForms.Guna2GradientButton btnQLTT;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
     }
 }

@@ -295,22 +295,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\8_Logo_Travel Agent_Vietravel-01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-home-50.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-tour-bus-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zyro-image.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-flag-64.png" />
@@ -352,8 +340,8 @@
     <None Include="Resources\DL.jpg" />
     <None Include="Resources\dg_200827_HA LONG_3220528881.jpg" />
     <None Include="Resources\logo.png" />
-    <None Include="Resources\slogan.jpg" />
     <None Include="Resources\banner.jpg" />
+    <None Include="Resources\logo.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

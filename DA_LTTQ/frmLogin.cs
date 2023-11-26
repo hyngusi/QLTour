@@ -66,5 +66,10 @@ namespace DA_LTTQ
         {
             txtMK.PasswordChar = '\u25CF';
         }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

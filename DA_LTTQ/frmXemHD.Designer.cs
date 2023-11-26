@@ -38,6 +38,7 @@ namespace DA_LTTQ
             this.ElipseCloseFrm = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ElipseMin = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnHuyTour = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblGiaTour = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblTenTour = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace DA_LTTQ
             this.label2 = new System.Windows.Forms.Label();
             this.ControlMin = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnHuyTour = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhVien)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +105,33 @@ namespace DA_LTTQ
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(822, 555);
             this.guna2CustomGradientPanel1.TabIndex = 0;
+            // 
+            // btnHuyTour
+            // 
+            this.btnHuyTour.BackColor = System.Drawing.Color.White;
+            this.btnHuyTour.BorderRadius = 10;
+            this.btnHuyTour.BorderThickness = 1;
+            this.btnHuyTour.CheckedState.Parent = this.btnHuyTour;
+            this.btnHuyTour.CustomImages.Parent = this.btnHuyTour;
+            this.btnHuyTour.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuyTour.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuyTour.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuyTour.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuyTour.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHuyTour.DisabledState.Parent = this.btnHuyTour;
+            this.btnHuyTour.FillColor = System.Drawing.Color.Navy;
+            this.btnHuyTour.FillColor2 = System.Drawing.Color.Gray;
+            this.btnHuyTour.Font = new System.Drawing.Font("Consolas", 13F);
+            this.btnHuyTour.ForeColor = System.Drawing.Color.White;
+            this.btnHuyTour.HoverState.Parent = this.btnHuyTour;
+            this.btnHuyTour.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHuyTour.Location = new System.Drawing.Point(672, 508);
+            this.btnHuyTour.Name = "btnHuyTour";
+            this.btnHuyTour.ShadowDecoration.Parent = this.btnHuyTour;
+            this.btnHuyTour.Size = new System.Drawing.Size(117, 45);
+            this.btnHuyTour.TabIndex = 140;
+            this.btnHuyTour.Text = "Hủy Tour";
+            this.btnHuyTour.Click += new System.EventHandler(this.btnHuyTour_Click);
             // 
             // lblGiaTour
             // 
@@ -404,38 +431,11 @@ namespace DA_LTTQ
             this.ControlClose.Size = new System.Drawing.Size(32, 32);
             this.ControlClose.TabIndex = 122;
             // 
-            // btnHuyTour
-            // 
-            this.btnHuyTour.BackColor = System.Drawing.Color.White;
-            this.btnHuyTour.BorderRadius = 10;
-            this.btnHuyTour.BorderThickness = 1;
-            this.btnHuyTour.CheckedState.Parent = this.btnHuyTour;
-            this.btnHuyTour.CustomImages.Parent = this.btnHuyTour;
-            this.btnHuyTour.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHuyTour.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHuyTour.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHuyTour.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHuyTour.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHuyTour.DisabledState.Parent = this.btnHuyTour;
-            this.btnHuyTour.FillColor = System.Drawing.Color.Navy;
-            this.btnHuyTour.FillColor2 = System.Drawing.Color.Gray;
-            this.btnHuyTour.Font = new System.Drawing.Font("Consolas", 13F);
-            this.btnHuyTour.ForeColor = System.Drawing.Color.White;
-            this.btnHuyTour.HoverState.Parent = this.btnHuyTour;
-            this.btnHuyTour.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHuyTour.Location = new System.Drawing.Point(672, 508);
-            this.btnHuyTour.Name = "btnHuyTour";
-            this.btnHuyTour.ShadowDecoration.Parent = this.btnHuyTour;
-            this.btnHuyTour.Size = new System.Drawing.Size(117, 45);
-            this.btnHuyTour.TabIndex = 140;
-            this.btnHuyTour.Text = "Hủy Tour";
-            this.btnHuyTour.Click += new System.EventHandler(this.btnHuyTour_Click);
-            // 
             // frmXemHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(40)))), ((int)(((byte)(37)))));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(846, 579);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

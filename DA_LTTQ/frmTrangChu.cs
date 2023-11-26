@@ -25,5 +25,10 @@ namespace DA_LTTQ
         {
 
         }
+
+        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

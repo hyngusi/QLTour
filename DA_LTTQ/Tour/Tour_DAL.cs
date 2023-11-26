@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace DA_LTTQ
 {
@@ -221,8 +222,9 @@ namespace DA_LTTQ
                 con.Close();
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(Convert.ToString(e));
                 return false;
             }
             return true;

@@ -37,12 +37,12 @@ namespace DA_LTTQ
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.ElipseFrm = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnXemCTHD = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXemCTHD = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,32 +119,7 @@ namespace DA_LTTQ
             this.dgvHoaDon.ThemeStyle.RowsStyle.Height = 25;
             this.dgvHoaDon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHoaDon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // btnXemCTHD
-            // 
-            this.btnXemCTHD.BorderRadius = 10;
-            this.btnXemCTHD.BorderThickness = 1;
-            this.btnXemCTHD.CheckedState.Parent = this.btnXemCTHD;
-            this.btnXemCTHD.CustomImages.Parent = this.btnXemCTHD;
-            this.btnXemCTHD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXemCTHD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXemCTHD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXemCTHD.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXemCTHD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXemCTHD.DisabledState.Parent = this.btnXemCTHD;
-            this.btnXemCTHD.FillColor = System.Drawing.Color.Navy;
-            this.btnXemCTHD.FillColor2 = System.Drawing.Color.Gray;
-            this.btnXemCTHD.Font = new System.Drawing.Font("Consolas", 13F);
-            this.btnXemCTHD.ForeColor = System.Drawing.Color.White;
-            this.btnXemCTHD.HoverState.Parent = this.btnXemCTHD;
-            this.btnXemCTHD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXemCTHD.Location = new System.Drawing.Point(448, 12);
-            this.btnXemCTHD.Name = "btnXemCTHD";
-            this.btnXemCTHD.ShadowDecoration.Parent = this.btnXemCTHD;
-            this.btnXemCTHD.Size = new System.Drawing.Size(289, 45);
-            this.btnXemCTHD.TabIndex = 115;
-            this.btnXemCTHD.Text = " Xem chi tiết hóa đơn";
-            this.btnXemCTHD.Click += new System.EventHandler(this.btnXemCTHD_Click);
+            this.dgvHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellContentClick);
             // 
             // Column1
             // 
@@ -181,6 +156,32 @@ namespace DA_LTTQ
             this.Column5.HeaderText = "Thành tiền";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // btnXemCTHD
+            // 
+            this.btnXemCTHD.BorderRadius = 10;
+            this.btnXemCTHD.BorderThickness = 1;
+            this.btnXemCTHD.CheckedState.Parent = this.btnXemCTHD;
+            this.btnXemCTHD.CustomImages.Parent = this.btnXemCTHD;
+            this.btnXemCTHD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemCTHD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemCTHD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXemCTHD.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXemCTHD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXemCTHD.DisabledState.Parent = this.btnXemCTHD;
+            this.btnXemCTHD.FillColor = System.Drawing.Color.Navy;
+            this.btnXemCTHD.FillColor2 = System.Drawing.Color.Gray;
+            this.btnXemCTHD.Font = new System.Drawing.Font("Consolas", 13F);
+            this.btnXemCTHD.ForeColor = System.Drawing.Color.White;
+            this.btnXemCTHD.HoverState.Parent = this.btnXemCTHD;
+            this.btnXemCTHD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXemCTHD.Location = new System.Drawing.Point(448, 12);
+            this.btnXemCTHD.Name = "btnXemCTHD";
+            this.btnXemCTHD.ShadowDecoration.Parent = this.btnXemCTHD;
+            this.btnXemCTHD.Size = new System.Drawing.Size(289, 45);
+            this.btnXemCTHD.TabIndex = 115;
+            this.btnXemCTHD.Text = " Xem chi tiết hóa đơn";
+            this.btnXemCTHD.Click += new System.EventHandler(this.btnXemCTHD_Click);
             // 
             // frmHoaDon
             // 
