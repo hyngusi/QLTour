@@ -238,17 +238,30 @@ namespace DA_LTTQ
             if (index >= 0)
             {
                 CloseBox();
+                try
+                {
+                    ResetBox();
+;                   txtMANV.Text = DataGridViewNhanVien.Rows[index].Cells[0].Value.ToString();
+                    if (txtMANV.Text != "")
+                    {
+                        btnThem.Enabled = true;
+                        btnSua.Enabled = true;
+                        btnLuu.Enabled = false;
+                        btnXoa.Enabled = true;
 
-                btnThem.Enabled = true;
-                btnSua.Enabled = true;
-                btnLuu.Enabled = false;
-                btnXoa.Enabled = true;
-                txtMANV.Text = DataGridViewNhanVien.Rows[index].Cells[0].Value.ToString();
-                txtTENNV.Text = DataGridViewNhanVien.Rows[index].Cells[1].Value.ToString();
-                dtpNGSINH.Value = Convert.ToDateTime(DataGridViewNhanVien.Rows[index].Cells[2].Value.ToString());
-                txtSDT.Text = DataGridViewNhanVien.Rows[index].Cells[3].Value.ToString();
-                txtCMND_CCCD.Text = DataGridViewNhanVien.Rows[index].Cells[4].Value.ToString();
-                dtpNGVL.Value = Convert.ToDateTime(DataGridViewNhanVien.Rows[index].Cells[5].Value.ToString());
+                        txtTENNV.Text = DataGridViewNhanVien.Rows[index].Cells[1].Value.ToString();
+                        dtpNGSINH.Value = Convert.ToDateTime(DataGridViewNhanVien.Rows[index].Cells[2].Value.ToString());
+                        txtSDT.Text = DataGridViewNhanVien.Rows[index].Cells[3].Value.ToString();
+                        txtCMND_CCCD.Text = DataGridViewNhanVien.Rows[index].Cells[4].Value.ToString();
+                        dtpNGVL.Value = Convert.ToDateTime(DataGridViewNhanVien.Rows[index].Cells[5].Value.ToString());
+                    }
+                    else
+                    {
+                        btnSua.Enabled = false;
+                        btnXoa.Enabled = false;
+                    }
+                }
+                catch { }
             }
         }
 

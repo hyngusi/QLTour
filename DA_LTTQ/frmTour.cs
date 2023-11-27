@@ -29,6 +29,7 @@ namespace DA_LTTQ
 
         void ResetBox()
         {
+            txtMaTour.Clear();
             txtTenTour.Clear();
             txtMoTa.Clear();
             numSL.Value = 0;
@@ -476,22 +477,26 @@ namespace DA_LTTQ
 
         private void loadClick()
         {
-            tbl_Tour Tour = new tbl_Tour();
-            Tour.MaTour = dgvTour.SelectedRows[0].Cells[0].Value.ToString();
-            DataTable dataTable2 = new DataTable();
-            dataTable2 = bllTour.GetAllTour2(Tour);
-            txtMaTour.Text = dataTable2.Rows[0]["MATOUR"].ToString();
-            txtTenTour.Text = dataTable2.Rows[0]["TENTOUR"].ToString();
-            txtMoTa.Text = dataTable2.Rows[0]["MOTA"].ToString();
-            numSL.Value = Convert.ToDecimal(dataTable2.Rows[0]["SOLUONGCONLAI"]);
-            dtpNgayDi.Value = Convert.ToDateTime(dataTable2.Rows[0]["NGAYDITOUR"]);
-            dtpNgayKT.Value = Convert.ToDateTime(dataTable2.Rows[0]["NGAYKETTHUC"]);
-            cmbLoaiTour.SelectedValue = dataTable2.Rows[0]["MALTOUR"].ToString();
-            cmbPT.SelectedValue = dataTable2.Rows[0]["MAPT"].ToString();
-            cmbDiemDi.SelectedValue = dataTable2.Rows[0]["MADDI"].ToString();
-            cmbDDen.SelectedValue = dataTable2.Rows[0]["MADDEN"].ToString();
-            cmbKS.SelectedValue = dataTable2.Rows[0]["MALKS"].ToString();
-            txtGiaTour.Text = dataTable2.Rows[0]["GIATOUR"].ToString();
+            try
+            {
+                tbl_Tour Tour = new tbl_Tour();
+                Tour.MaTour = dgvTour.SelectedRows[0].Cells[0].Value.ToString();
+                DataTable dataTable2 = new DataTable();
+                dataTable2 = bllTour.GetAllTour2(Tour);
+                txtMaTour.Text = dataTable2.Rows[0]["MATOUR"].ToString();
+                txtTenTour.Text = dataTable2.Rows[0]["TENTOUR"].ToString();
+                txtMoTa.Text = dataTable2.Rows[0]["MOTA"].ToString();
+                numSL.Value = Convert.ToDecimal(dataTable2.Rows[0]["SOLUONGCONLAI"]);
+                dtpNgayDi.Value = Convert.ToDateTime(dataTable2.Rows[0]["NGAYDITOUR"]);
+                dtpNgayKT.Value = Convert.ToDateTime(dataTable2.Rows[0]["NGAYKETTHUC"]);
+                cmbLoaiTour.SelectedValue = dataTable2.Rows[0]["MALTOUR"].ToString();
+                cmbPT.SelectedValue = dataTable2.Rows[0]["MAPT"].ToString();
+                cmbDiemDi.SelectedValue = dataTable2.Rows[0]["MADDI"].ToString();
+                cmbDDen.SelectedValue = dataTable2.Rows[0]["MADDEN"].ToString();
+                cmbKS.SelectedValue = dataTable2.Rows[0]["MALKS"].ToString();
+                txtGiaTour.Text = dataTable2.Rows[0]["GIATOUR"].ToString();
+            }
+            catch { }
         }
 
         private void btnAnh1_Click(object sender, EventArgs e)
@@ -562,46 +567,64 @@ namespace DA_LTTQ
             if (index >= 0)
             {
                 CloseBox();
+                ResetBox();
+                try
+                {
+                    tbl_Tour Tour = new tbl_Tour();
+                    Tour.MaTour = dgvTour.SelectedRows[0].Cells[0].Value.ToString();
+                    if (Tour.MaTour != "")
+                    {
+                        btnThem.Enabled = true;
+                        btnSua.Enabled = true;
+                        btnLuu.Enabled = false;
+                        btnXoa.Enabled = true;
+                        loadClick();
 
-                btnThem.Enabled = true;
-                btnSua.Enabled = true;
-                btnLuu.Enabled = false;
-                btnXoa.Enabled = true;
-                loadClick();
-                DataTable dttable = new DataTable();
-                tbl_Tour Tour = new tbl_Tour();
-                Tour.MaTour = dgvTour.SelectedRows[0].Cells[0].Value.ToString();
-                dttable = bllTour.GetTTTour(Tour);
-                lblTenTour.Text = dttable.Rows[0]["TENTOUR"].ToString();
-                lblMoTa.Text = dttable.Rows[0]["MOTA"].ToString();
-                lblGiaTour.Text = string.Format("{0:#,##0}", decimal.Parse(dttable.Rows[0]["GIATOUR"].ToString())) + "/Khách";
+                        DataTable dttable = new DataTable();
+                        dttable = bllTour.GetTTTour(Tour);
+                        lblTenTour.Text = dttable.Rows[0]["TENTOUR"].ToString();
+                        lblMoTa.Text = dttable.Rows[0]["MOTA"].ToString();
+                        lblGiaTour.Text = string.Format("{0:#,##0}", decimal.Parse(dttable.Rows[0]["GIATOUR"].ToString())) + "/Khách";
 
-                picHinh1.Image = GetImage((byte[])(dttable.Rows[0]["ANH1"]));
-                picHinh2.Image = GetImage((byte[])(dttable.Rows[0]["ANH2"]));
-                picHinh3.Image = GetImage((byte[])(dttable.Rows[0]["ANH3"]));
-                picHinh4.Image = GetImage((byte[])(dttable.Rows[0]["ANH4"]));
+                        picHinh1.Image = GetImage((byte[])(dttable.Rows[0]["ANH1"]));
+                        picHinh2.Image = GetImage((byte[])(dttable.Rows[0]["ANH2"]));
+                        picHinh3.Image = GetImage((byte[])(dttable.Rows[0]["ANH3"]));
+                        picHinh4.Image = GetImage((byte[])(dttable.Rows[0]["ANH4"]));
 
-                MemoryStream ms1 = new MemoryStream();
-                picHinh1.Image.Save(ms1, picHinh1.Image.RawFormat);
-                pic1 = ms1.GetBuffer();
-                picHinh2.Image.Save(ms1, picHinh2.Image.RawFormat);
-                pic2 = ms1.GetBuffer();
-                picHinh3.Image.Save(ms1, picHinh3.Image.RawFormat);
-                pic3 = ms1.GetBuffer();
-                picHinh4.Image.Save(ms1, picHinh4.Image.RawFormat);
-                pic4 = ms1.GetBuffer();
+                        MemoryStream ms1 = new MemoryStream();
+                        picHinh1.Image.Save(ms1, picHinh1.Image.RawFormat);
+                        pic1 = ms1.GetBuffer();
+                        picHinh2.Image.Save(ms1, picHinh2.Image.RawFormat);
+                        pic2 = ms1.GetBuffer();
+                        picHinh3.Image.Save(ms1, picHinh3.Image.RawFormat);
+                        pic3 = ms1.GetBuffer();
+                        picHinh4.Image.Save(ms1, picHinh4.Image.RawFormat);
+                        pic4 = ms1.GetBuffer();
 
-                lblTGKH.Text = dttable.Rows[0]["NGAYDITOUR"].ToString();
-                //dttable.Rows[0]["NGAYKETTHUC"].ToString();
-                lblNoiKH.Text = dttable.Rows[0]["TENDDI"].ToString();
-                lblSoNgay.Text = dttable.Rows[0]["TG"].ToString() + " ngày";
-                lblSlot.Text = dttable.Rows[0]["SOLUONGCONLAI"].ToString();
-                int SoDem = Convert.ToInt32(dttable.Rows[0]["TG"].ToString()) - 1;
-                lblTGnho.Text = lblSoNgay.Text + " " + SoDem + " đêm";
-                lblPT.Text = dttable.Rows[0]["TENPT"].ToString();
-                lblDiemDen.Text = dttable.Rows[0]["TENDDEN"].ToString();
-                lblKS.Text = dttable.Rows[0]["TENLKS"].ToString();
-                lblMaTour.Text = dttable.Rows[0]["MATOUR"].ToString();
+                        lblTGKH.Text = dttable.Rows[0]["NGAYDITOUR"].ToString();
+                        //dttable.Rows[0]["NGAYKETTHUC"].ToString();
+                        lblNoiKH.Text = dttable.Rows[0]["TENDDI"].ToString();
+                        lblSoNgay.Text = dttable.Rows[0]["TG"].ToString() + " ngày";
+                        lblSlot.Text = dttable.Rows[0]["SOLUONGCONLAI"].ToString();
+                        if (lblSlot.Text == "0")
+                        {
+
+                        }
+
+                        int SoDem = Convert.ToInt32(dttable.Rows[0]["TG"].ToString()) - 1;
+                        lblTGnho.Text = lblSoNgay.Text + " " + SoDem + " đêm";
+                        lblPT.Text = dttable.Rows[0]["TENPT"].ToString();
+                        lblDiemDen.Text = dttable.Rows[0]["TENDDEN"].ToString();
+                        lblKS.Text = dttable.Rows[0]["TENLKS"].ToString();
+                        lblMaTour.Text = dttable.Rows[0]["MATOUR"].ToString();
+                    }
+                    else
+                    {
+                        btnSua.Enabled = false;
+                        btnXoa.Enabled = false;
+                    }
+                }
+                catch { }
             }
         }
 

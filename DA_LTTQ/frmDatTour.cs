@@ -180,9 +180,14 @@ namespace DA_LTTQ
         private void dgvTour_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             frmThongTinTour TTTourfrm = new frmThongTinTour();
+            TTTourfrm.btlDatTour.Enabled = true;
             DataTable dttable = new DataTable();
             tbl_Tour Tour = new tbl_Tour();
             Tour.MaTour = dgvTour.SelectedRows[0].Cells[0].Value.ToString();
+            if (Tour.MaTour == "")
+            {
+                TTTourfrm.btlDatTour.Enabled = false;
+            }
             dttable = bllTour.GetTTTour(Tour);
             try {
                 TTTourfrm.lblTenTour.Text = "[" + dttable.Rows[0]["MATOUR"].ToString() + "] " + dttable.Rows[0]["TENTOUR"].ToString();
@@ -213,22 +218,20 @@ namespace DA_LTTQ
                 TTTourfrm.lblKS.Text = dttable.Rows[0]["TENLKS"].ToString();
                 TTTourfrm.lblMaTour.Text = dttable.Rows[0]["MATOUR"].ToString();
 
-                String ngayDiTour = dttable.Rows[0]["NGAYDITOUR"].ToString();
-
+                // check dữ liệu 
                 DateTime today = DateTime.Now;
                 DateTime lastDay = Convert.ToDateTime(dttable.Rows[0]["NGAYDITOUR"]);
-
                 TimeSpan calDays = lastDay - today;
-
                 // Ngày đặt Tour phải trước Ngày đi Tour 1 ngày
                 if (Convert.ToDouble(calDays.TotalDays) <= 1)
                 {
                     TTTourfrm.btlDatTour.Enabled = false;
                 }
 
-                if (Convert.ToDouble(calDays.TotalDays) > 1)
+                // hết slot
+                if (TTTourfrm.lblSlot.Text == "0" )
                 {
-                    TTTourfrm.btlDatTour.Enabled = true;
+                    TTTourfrm.btlDatTour.Enabled = false;
                 }
             }
             catch { }
