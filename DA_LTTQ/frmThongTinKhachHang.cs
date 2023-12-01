@@ -120,46 +120,54 @@ namespace DA_LTTQ
                 MessageBox.Show("Phải có ít nhất 1 người lớn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             else
             {
-                tbl_Tour Tour = new tbl_Tour();
-                Tour.MaTour = lblMaTour.Text;
-
-                tbl_HoaDon HoaDon = new tbl_HoaDon();
-                HoaDon.SoHD = lblSoHD.Text;
-                HoaDon.MaTour = lblMaTour.Text;
-                HoaDon.MaNV = cmbTenNV.SelectedValue.ToString();
-                if (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1 < 10)
-                    MaKH = "0" + (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1);
-                else
-                    MaKH = (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1).ToString();
-                HoaDon.MaKH = "KH" + MaKH;
-                HoaDon.NgayLapHoaDon = Convert.ToDateTime(lblNgayTaoHD.Text);
-                HoaDon.ThanhTienHoaDon = Convert.ToDecimal((CheckLLT1() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[0][2]) + CheckLLT2() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[1][2])
-                                            + CheckLLT3() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[2][2]) + Convert.ToInt32(bllTour.GetTTTour(Tour).Rows[0]["GIATOUR"]) + CheckLLT4() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[3][2])).ToString());
-                if (bllHoaDon.InsertHoaDon(HoaDon))
+                try
                 {
+                    tbl_Tour Tour = new tbl_Tour();
                     Tour.MaTour = lblMaTour.Text;
-                    tbl_KhachHang kh = new tbl_KhachHang();
-                    kh.MaKH = "KH" + MaKH; ;
-                    bllTour.UpdatesltOUR(Tour, kh);
-                    frmReportHD BillFrm = new frmReportHD();
-                    BillFrm.Report = new tbl_Report();
-                    BillFrm.Report.SoHD = lblSoHD.Text;
+
+                    tbl_HoaDon HoaDon = new tbl_HoaDon();
+                    HoaDon.SoHD = lblSoHD.Text;
+                    HoaDon.MaTour = lblMaTour.Text;
+                    HoaDon.MaNV = cmbTenNV.SelectedValue.ToString();
                     if (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1 < 10)
                         MaKH = "0" + (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1);
                     else
                         MaKH = (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1).ToString();
-                    BillFrm.Report.MaKH = "KH" + MaKH;
-                    BillFrm.reportHD.LocalReport.DataSources.Clear();
-                    ReportDataSource datasource = new ReportDataSource("DataSet1", bllReport.getReport(BillFrm.Report).Tables[0]);
-                    //ReportDataSource datasource2 = new ReportDataSource("dtSetTTTV", bllReport.getReport2(BillFrm.Report).Tables[0]);
-                    BillFrm.reportHD.LocalReport.DataSources.Clear();
-                    BillFrm.reportHD.LocalReport.DataSources.Add(datasource);
-                    //BillFrm.reportHD.LocalReport.DataSources.Add(datasource2);
-                    BillFrm.reportHD.LocalReport.Refresh();
-                    this.Close();
+                    HoaDon.MaKH = "KH" + MaKH;
+                    HoaDon.NgayLapHoaDon = Convert.ToDateTime(lblNgayTaoHD.Text);
+                    HoaDon.ThanhTienHoaDon = Convert.ToDecimal((CheckLLT1() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[0][2]) + CheckLLT2() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[1][2])
+                                                + CheckLLT3() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[2][2]) + Convert.ToInt32(bllTour.GetTTTour(Tour).Rows[0]["GIATOUR"]) + CheckLLT4() * Convert.ToInt32(bllLLT.GetAllLLT().Rows[3][2])).ToString());
+                    if (bllHoaDon.InsertHoaDon(HoaDon))
+                    {
 
-                    BillFrm.Show();
-                    //MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("inseert thanh cong");
+                        Tour.MaTour = lblMaTour.Text;
+                        tbl_KhachHang kh = new tbl_KhachHang();
+                        kh.MaKH = "KH" + MaKH; ;
+                        bllTour.UpdatesltOUR(Tour, kh);
+                        frmReportHD BillFrm = new frmReportHD();
+                        BillFrm.Report = new tbl_Report();
+                        BillFrm.Report.SoHD = lblSoHD.Text;
+                        if (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1 < 10)
+                            MaKH = "0" + (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1);
+                        else
+                            MaKH = (Convert.ToInt32(bllKhachHang.GeTSoKHDangCo()) - 1).ToString();
+                        BillFrm.Report.MaKH = "KH" + MaKH;
+                        BillFrm.reportHD.LocalReport.DataSources.Clear();
+                        ReportDataSource datasource = new ReportDataSource("DataSet1", bllReport.getReport(BillFrm.Report).Tables[0]);
+                        //ReportDataSource datasource2 = new ReportDataSource("dtSetTTTV", bllReport.getReport2(BillFrm.Report).Tables[0]);
+                        BillFrm.reportHD.LocalReport.DataSources.Clear();
+                        BillFrm.reportHD.LocalReport.DataSources.Add(datasource);
+                        //BillFrm.reportHD.LocalReport.DataSources.Add(datasource2);
+                        BillFrm.reportHD.LocalReport.Refresh();
+                        this.Close();
+
+                        BillFrm.Show();
+                        //MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex){
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
@@ -219,7 +227,7 @@ namespace DA_LTTQ
 
         private void LoadDaTa()
         {
-            string SoHD;
+            String SoHD;
             cmbTenNV.ValueMember = "MaNV";
             cmbTenNV.DisplayMember = "TenNV";
             cmbTenNV.DataSource = bllNhanVien.GetAllNhanVien();
