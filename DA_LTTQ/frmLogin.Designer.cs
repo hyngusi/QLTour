@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmLogin
     {
@@ -214,7 +214,7 @@ namespace DA_LTTQ
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BackgroundImage = global::DA_LTTQ.Properties.Resources.banner1;
+            this.BackgroundImage = global::QLTour.Properties.Resources.banner;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(947, 589);
             this.Controls.Add(this.guna2ResizeBox1);

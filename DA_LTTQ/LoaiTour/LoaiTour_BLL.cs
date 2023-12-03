@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     class LoaiTour_BLL
     {

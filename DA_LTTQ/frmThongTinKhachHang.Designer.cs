@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmThongTinKhachHang
     {
@@ -579,7 +579,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox4
             // 
-            this.guna2PictureBox4.Image = global::DA_LTTQ.Properties.Resources.icons8_selfish_64;
+            this.guna2PictureBox4.Image = global::QLTour.Properties.Resources.icons8_selfish_64;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(362, 2);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -788,7 +788,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox3
             // 
-            this.guna2PictureBox3.Image = global::DA_LTTQ.Properties.Resources.tomtatchuyendi;
+            this.guna2PictureBox3.Image = global::QLTour.Properties.Resources.tomtatchuyendi;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(234, 192);
             this.guna2PictureBox3.Name = "guna2PictureBox3";

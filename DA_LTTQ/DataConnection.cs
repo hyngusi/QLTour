@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
+﻿using System.Data.SqlClient;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     class DataConnection
     {
         string conStr;
         public DataConnection()
         {
-            conStr = @"Data Source=Hy;Initial Catalog=DA_LTTQ;Integrated Security=True";
+            conStr = @"Data Source=Hy;Initial Catalog=QLTour;Integrated Security=True";
         }
 
         public SqlConnection getConnect()

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Microsoft.Reporting.WinForms;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     public partial class frmThongTinKhachHang : Form
     {

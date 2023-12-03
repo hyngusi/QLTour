@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmTrangChu
     {
@@ -304,7 +304,7 @@ namespace DA_LTTQ
             // 
             this.guna2PictureBox5.BorderRadius = 10;
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox5.Image = global::DA_LTTQ.Properties.Resources.dg_200827_HA_LONG_322052888;
+            this.guna2PictureBox5.Image = global::QLTour.Properties.Resources.dg_200827_HA_LONG_322052888;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -328,7 +328,7 @@ namespace DA_LTTQ
             // 
             this.guna2PictureBox4.BorderRadius = 10;
             this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox4.Image = global::DA_LTTQ.Properties.Resources.dg_200914_Da_Lat___8_;
+            this.guna2PictureBox4.Image = global::QLTour.Properties.Resources.dg_200914_Da_Lat___8_;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -352,7 +352,7 @@ namespace DA_LTTQ
             // 
             this.guna2PictureBox3.BorderRadius = 10;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox3.Image = global::DA_LTTQ.Properties.Resources.dg_200827_CAU_RONG_VE_DEM_1;
+            this.guna2PictureBox3.Image = global::QLTour.Properties.Resources.dg_200827_CAU_RONG_VE_DEM_1;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";

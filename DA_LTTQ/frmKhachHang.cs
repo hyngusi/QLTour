@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     public partial class frmKhachHang : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace DA_LTTQ.Report
+﻿namespace QLTour.Report
 {
 
 

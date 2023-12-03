@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     public partial class frmDatTour : Form
     {

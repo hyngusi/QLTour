@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmKhachHang
     {

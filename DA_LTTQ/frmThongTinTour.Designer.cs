@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmThongTinTour
     {
@@ -339,7 +339,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox6
             // 
-            this.guna2PictureBox6.Image = global::DA_LTTQ.Properties.Resources.icons8_selfish_64;
+            this.guna2PictureBox6.Image = global::QLTour.Properties.Resources.icons8_selfish_64;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(53, 18);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -383,7 +383,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox7
             // 
-            this.guna2PictureBox7.Image = global::DA_LTTQ.Properties.Resources.icons8_clock_50;
+            this.guna2PictureBox7.Image = global::QLTour.Properties.Resources.icons8_clock_50;
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(53, 18);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
@@ -427,7 +427,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox3
             // 
-            this.guna2PictureBox3.Image = global::DA_LTTQ.Properties.Resources.icons8_map_50;
+            this.guna2PictureBox3.Image = global::QLTour.Properties.Resources.icons8_map_50;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(53, 20);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -460,7 +460,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox8
             // 
-            this.guna2PictureBox8.Image = global::DA_LTTQ.Properties.Resources.icons8_hotel_64;
+            this.guna2PictureBox8.Image = global::QLTour.Properties.Resources.icons8_hotel_64;
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(53, 18);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
@@ -504,7 +504,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = global::DA_LTTQ.Properties.Resources.icons8_bus_50;
+            this.guna2PictureBox2.Image = global::QLTour.Properties.Resources.icons8_bus_50;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(53, 20);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
@@ -538,7 +538,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::DA_LTTQ.Properties.Resources.icons8_flag_64;
+            this.guna2PictureBox1.Image = global::QLTour.Properties.Resources.icons8_flag_64;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(53, 20);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

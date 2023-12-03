@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     public partial class frmTour : Form
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmNhanVien
     {
@@ -335,7 +335,7 @@ namespace DA_LTTQ
             this.btnTroVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.ForeColor = System.Drawing.Color.White;
             this.btnTroVe.HoverState.Parent = this.btnTroVe;
-            this.btnTroVe.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_24;
+            this.btnTroVe.Image = global::QLTour.Properties.Resources.icons8_reset_24;
             this.btnTroVe.Location = new System.Drawing.Point(295, 497);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.ShadowDecoration.Parent = this.btnTroVe;

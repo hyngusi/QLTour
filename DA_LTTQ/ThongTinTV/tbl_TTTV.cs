@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     class tbl_TTTV
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmHome
     {
@@ -89,7 +89,7 @@ namespace DA_LTTQ
             this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(40)))), ((int)(((byte)(37)))));
             this.guna2PictureBox1.BorderRadius = 15;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox1.Image = global::DA_LTTQ.Properties.Resources.dg_200914_Da_Lat___8_1;
+            this.guna2PictureBox1.Image = global::QLTour.Properties.Resources.dg_200914_Da_Lat___8_1;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -114,7 +114,7 @@ namespace DA_LTTQ
             this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(40)))), ((int)(((byte)(37)))));
             this.guna2PictureBox3.BorderRadius = 15;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox3.Image = global::DA_LTTQ.Properties.Resources.dg_200827_HA_LONG_3220528881;
+            this.guna2PictureBox3.Image = global::QLTour.Properties.Resources.dg_200827_HA_LONG_3220528881;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -139,7 +139,7 @@ namespace DA_LTTQ
             this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(40)))), ((int)(((byte)(37)))));
             this.guna2PictureBox2.BorderRadius = 15;
             this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox2.Image = global::DA_LTTQ.Properties.Resources.DL;
+            this.guna2PictureBox2.Image = global::QLTour.Properties.Resources.DL;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";

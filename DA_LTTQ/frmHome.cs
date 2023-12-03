@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     public partial class frmHome : Form
     {

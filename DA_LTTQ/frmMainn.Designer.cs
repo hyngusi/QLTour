@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmMainn
     {
@@ -83,7 +83,7 @@ namespace DA_LTTQ
             this.btnTour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTour.ForeColor = System.Drawing.Color.White;
             this.btnTour.HoverState.Parent = this.btnTour;
-            this.btnTour.Image = global::DA_LTTQ.Properties.Resources.icons8_tour_bus_50;
+            this.btnTour.Image = global::QLTour.Properties.Resources.icons8_tour_bus_50;
             this.btnTour.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTour.Location = new System.Drawing.Point(0, 0);
             this.btnTour.Name = "btnTour";
@@ -247,7 +247,7 @@ namespace DA_LTTQ
             this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangChu.ForeColor = System.Drawing.Color.White;
             this.btnTrangChu.HoverState.Parent = this.btnTrangChu;
-            this.btnTrangChu.Image = global::DA_LTTQ.Properties.Resources.icons8_home_50;
+            this.btnTrangChu.Image = global::QLTour.Properties.Resources.icons8_home_50;
             this.btnTrangChu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTrangChu.Location = new System.Drawing.Point(0, 0);
             this.btnTrangChu.Name = "btnTrangChu";
@@ -290,7 +290,7 @@ namespace DA_LTTQ
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::DA_LTTQ.Properties.Resources.logo;
+            this.guna2PictureBox1.Image = global::QLTour.Properties.Resources.logo;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(12, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -312,7 +312,7 @@ namespace DA_LTTQ
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Image = global::DA_LTTQ.Properties.Resources.icons8_exit_60;
+            this.guna2GradientButton1.Image = global::QLTour.Properties.Resources.icons8_exit_60;
             this.guna2GradientButton1.Location = new System.Drawing.Point(1104, 12);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;

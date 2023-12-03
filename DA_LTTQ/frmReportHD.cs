@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     public partial class frmReportHD : Form
     {

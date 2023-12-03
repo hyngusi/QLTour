@@ -1,5 +1,5 @@
 ﻿
-namespace DA_LTTQ
+namespace QLTour
 {
     partial class frmThongTin
     {
@@ -301,7 +301,7 @@ namespace DA_LTTQ
             this.btnResetLLT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnResetLLT.ForeColor = System.Drawing.Color.White;
             this.btnResetLLT.HoverState.Parent = this.btnResetLLT;
-            this.btnResetLLT.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_30;
+            this.btnResetLLT.Image = global::QLTour.Properties.Resources.icons8_reset_30;
             this.btnResetLLT.Location = new System.Drawing.Point(268, 217);
             this.btnResetLLT.Name = "btnResetLLT";
             this.btnResetLLT.ShadowDecoration.Parent = this.btnResetLLT;
@@ -608,7 +608,7 @@ namespace DA_LTTQ
             this.btnResetKS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnResetKS.ForeColor = System.Drawing.Color.White;
             this.btnResetKS.HoverState.Parent = this.btnResetKS;
-            this.btnResetKS.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_30;
+            this.btnResetKS.Image = global::QLTour.Properties.Resources.icons8_reset_30;
             this.btnResetKS.Location = new System.Drawing.Point(266, 343);
             this.btnResetKS.Name = "btnResetKS";
             this.btnResetKS.ShadowDecoration.Parent = this.btnResetKS;
@@ -868,7 +868,7 @@ namespace DA_LTTQ
             this.btnResetLKS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnResetLKS.ForeColor = System.Drawing.Color.White;
             this.btnResetLKS.HoverState.Parent = this.btnResetLKS;
-            this.btnResetLKS.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_30;
+            this.btnResetLKS.Image = global::QLTour.Properties.Resources.icons8_reset_30;
             this.btnResetLKS.Location = new System.Drawing.Point(268, 154);
             this.btnResetLKS.Name = "btnResetLKS";
             this.btnResetLKS.ShadowDecoration.Parent = this.btnResetLKS;
@@ -1180,7 +1180,7 @@ namespace DA_LTTQ
             this.btnResetPT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnResetPT.ForeColor = System.Drawing.Color.White;
             this.btnResetPT.HoverState.Parent = this.btnResetPT;
-            this.btnResetPT.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_30;
+            this.btnResetPT.Image = global::QLTour.Properties.Resources.icons8_reset_30;
             this.btnResetPT.Location = new System.Drawing.Point(270, 154);
             this.btnResetPT.Name = "btnResetPT";
             this.btnResetPT.ShadowDecoration.Parent = this.btnResetPT;
@@ -1435,7 +1435,7 @@ namespace DA_LTTQ
             this.btnResetDDL.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnResetDDL.ForeColor = System.Drawing.Color.White;
             this.btnResetDDL.HoverState.Parent = this.btnResetDDL;
-            this.btnResetDDL.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_30;
+            this.btnResetDDL.Image = global::QLTour.Properties.Resources.icons8_reset_30;
             this.btnResetDDL.Location = new System.Drawing.Point(268, 217);
             this.btnResetDDL.Name = "btnResetDDL";
             this.btnResetDDL.ShadowDecoration.Parent = this.btnResetDDL;
@@ -1650,7 +1650,7 @@ namespace DA_LTTQ
             this.btnResetDKH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnResetDKH.ForeColor = System.Drawing.Color.White;
             this.btnResetDKH.HoverState.Parent = this.btnResetDKH;
-            this.btnResetDKH.Image = global::DA_LTTQ.Properties.Resources.icons8_reset_30;
+            this.btnResetDKH.Image = global::QLTour.Properties.Resources.icons8_reset_30;
             this.btnResetDKH.Location = new System.Drawing.Point(270, 217);
             this.btnResetDKH.Name = "btnResetDKH";
             this.btnResetDKH.ShadowDecoration.Parent = this.btnResetDKH;

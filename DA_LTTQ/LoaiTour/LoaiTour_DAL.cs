@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DA_LTTQ
+namespace QLTour
 {
     class LoaiTour_DAL
     {
