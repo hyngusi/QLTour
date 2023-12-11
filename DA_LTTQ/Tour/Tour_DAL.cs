@@ -21,7 +21,7 @@ namespace QLTour
 
         public DataTable GetTourBanChay()
         {
-            string sql = "select * from tour where matour = (select top 1 matour from test2 where tongtv = (select max(tongtv) from test2))";
+            string sql = "select * from tour where matour = (select top 1 matour from SelectTopTour where solanban = (select max(solanban) from SelectTopTour))";
             SqlConnection con = dataCon.getConnect();
             sqlDA = new SqlDataAdapter(sql, con);
             con.Open();
@@ -45,7 +45,7 @@ namespace QLTour
 
         public DataTable GetLocTour(tbl_Tour tour)
         {
-            string sql = "SELECT MATOUR, TENTOUR, SOLUONGCONLAI, NGAYDITOUR, NGAYKETTHUC, GIATOUR FROM dbo.TOUR WHERE MALTOUR = '"+ tour.MaLTour +"'";
+            string sql = "SELECT MATOUR, TENTOUR, SOLUONGCONLAI, NGAYDITOUR, NGAYKETTHUC, GIATOUR FROM dbo.TOUR WHERE MALTOUR = '" + tour.MaLTour + "'";
             SqlConnection con = dataCon.getConnect();
             sqlDA = new SqlDataAdapter(sql, con);
             con.Open();
@@ -54,7 +54,6 @@ namespace QLTour
             con.Close();
             return dataTable;
         }
-
 
         public bool UpdatesltOUR(tbl_Tour tour, tbl_KhachHang khachhang)
         {
